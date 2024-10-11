@@ -15,5 +15,9 @@ import { ErrorModalComponent } from './shared/modal/error-modal/error-modal.comp
 export class AppComponent {
   private errorService = inject(ErrorService);
 
-  error = this.errorService.error;
+  // take value string by: error = this._error.asReadonly(); 
+  error = this.errorService.error; 
 }
+ 
+// 1. pse nuk shfaqet mesashi i <p> kur vlera eshte zero: } @else if (places().length === 0) { ne user-places
+// 2. me kreyesorja, si e updeton nje array bosh ne file: 'user-places.json' libraris express kur shtojme ose kur fshim nje objekt??? 
