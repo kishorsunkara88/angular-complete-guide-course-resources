@@ -69,9 +69,7 @@ app.put("/user-places", async (req, res) => {
     updatedUserPlaces = [...userPlacesData, place]; 
   }
 
-  // *** ??? pyetja ime ketu eshte si i shton vlerat ne menyr atomatike brenda array userPlacesData ne file user-places.json ??? ***
-
- await fs.writeFile("./data/user-places.json",JSON.stringify(updatedUserPlaces));
+ await fs.writeFile("./data/user-places.json",JSON.stringify(updatedUserPlaces)); // updetojme array 'user-places.json' me vlera
 
   res.status(200).json({ userPlaces: updatedUserPlaces });
 });
@@ -94,7 +92,7 @@ app.delete("/user-places/:id", async (req, res) => {
     updatedUserPlaces.splice(placeIndex, 1); // vshim objektin nga array i updetushem 
   }
 
-   await fs.writeFile("./data/user-places.json",JSON.stringify(updatedUserPlaces));
+   await fs.writeFile("./data/user-places.json",JSON.stringify(updatedUserPlaces)); // updetojme array 'user-places.json' duke fshir vlerat
 
   // dhe e bejme response ne front
   res.status(200).json({ userPlaces: updatedUserPlaces }); 

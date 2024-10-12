@@ -19,5 +19,4 @@ export class AppComponent {
   error = this.errorService.error; 
 }
  
-// 1. pse nuk shfaqet mesashi i <p> kur vlera eshte zero: } @else if (places().length === 0) { ne user-places
-// 2. me kreyesorja, si e updeton nje array bosh ne file: 'user-places.json' libraris express kur shtojme ose kur fshim nje objekt??? 
+
